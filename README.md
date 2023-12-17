@@ -17,3 +17,10 @@ webmailadmin.website.com >> this is for "WebEnable WebAdmin"
   - From the MailEnableAdmin in Windows >> servers >> localhost >> services and Connections >> right click on "WebMail" and select "Properties" >> from the tab "Advanced" increse the upload limit and then ok.
   - Navigate to C:\Program Files\MailEnable\BIN\NETwebmail or C:\Program Files (x86)\Mail Enable\Bin\NETWebMail and open the file "web.config >> edit this line to increase the limit:
      <httpRuntime maxRequestLength="10240" executionTimeout="3600" /> // 10240 is the upload limit in kb
+
+9. enabling SSL server:
+a. from IIS manager >> select the server >> from the section ISS select "Server Certificates" >> from the right side select "Create Self-Signed Certificate":
+add certificate name and then ok.
+b. from the MailEnable Admin in Windows >> Servers >> right click on "localhost" and select Properties >> select SSL tab and from the menu Defaul SSL Cerificate select the certificate.
+c. from the MailEnable Admin in Windows >> Servers >> Services and Connections >> right click on SMTP and select Properties >> select the tab "Inbound" >> from the Port Settings section select "Settings" >> under the section Submission Port mark the options "Require SSL" and "Require connections to authenticate before sending email" and in the drop down menue select "Only allow secure authentication (using SSL or TLS)".
+*** In the inbound tab also we have advanced settings. There we can set the message size as well.
