@@ -13,3 +13,7 @@ webmailadmin.website.com >> this is for "WebEnable WebAdmin"
 5. Add webmail and webmailadmin subdomains in your DNS manager (cloudflare for example) as A records.
 6. You can access the links webmail.yourwebsite.com & webmailadmin.website.com and login with the userinformation that we set up in step 3.
 7. Test sending and receiving emails using webmail.yourwebsite.com.
+8. to increase the attachment upload size:
+  - From the MailEnableAdmin in Windows >> servers >> localhost >> services and Connections >> right click on "WebMail" and select "Properties" >> from the tab "Advanced" increse the upload limit and then ok.
+  - Navigate to C:\Program Files\MailEnable\BIN\NETwebmail or C:\Program Files (x86)\Mail Enable\Bin\NETWebMail and open the file "web.config >> edit this line to increase the limit:
+     <httpRuntime maxRequestLength="10240" executionTimeout="3600" /> // 10240 is the upload limit in kb
