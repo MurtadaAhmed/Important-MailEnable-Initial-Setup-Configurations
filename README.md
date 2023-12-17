@@ -19,6 +19,7 @@ webmailadmin.website.com >> this is for "WebEnable WebAdmin"
      <httpRuntime maxRequestLength="10240" executionTimeout="3600" /> // 10240 is the upload limit in kb
 
 9. enabling SSL server:
+
 a. from IIS manager >> select the server >> from the section ISS select "Server Certificates" >> from the right side select "Create Self-Signed Certificate":
 add certificate name and then ok.
 
